@@ -7,11 +7,11 @@ setup(
     name="nhonga-api",
     version="1.0.0",
     author="Nhonga API Library",
-    author_email="suporte@nhonga.net",
+    author_email="support@nhonga.net",
     description="Biblioteca Python para integração com a API Nhonga.net",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/nhonga/nhonga-python",
+    url="https://github.com/mucamba/nhonga-api-python",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
