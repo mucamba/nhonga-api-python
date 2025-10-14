@@ -16,7 +16,7 @@ from nhonga_api import NhongaAPI
 nhonga = NhongaAPI({
     "api_key": "SUA_CHAVE_API",
     "secret_key": "SUA_CHAVE_SECRETA",  # Opcional, necessária para webhooks
-    "base_url": "https://nhonga.net/api/"  # Opcional, padrão já configurado
+    "base_url": "https://vendorapay.com/api/"  # Opcional, padrão já configurado
 })
 ```
 
