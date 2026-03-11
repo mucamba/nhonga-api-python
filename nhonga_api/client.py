@@ -3,6 +3,7 @@ Cliente principal para a API Nhonga
 """
 
 import requests
+import hmac
 from typing import Optional, Callable, Union, Awaitable
 from .types import (
     NhongaConfig,
@@ -29,7 +30,7 @@ class NhongaAPI:
         """
         self.api_key = config["api_key"]
         self.secret_key = config.get("secret_key")
-        self.base_url = config.get("base_url", "https://vendorapay.com/api")
+        self.base_url = config.get("base_url", "https://nhonga.net/api")
         
         self.session = requests.Session()
         self.session.headers.update({
@@ -149,7 +150,7 @@ class NhongaAPI:
         """
         if not self.secret_key:
             raise NhongaError("Secret key not configured for webhook validation")
-        return self.secret_key == received_secret_key
+        return hmac.compare_digest(self.secret_key, received_secret_key)
     
     def process_webhook(
         self, 
