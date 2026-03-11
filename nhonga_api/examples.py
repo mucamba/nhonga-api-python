@@ -228,8 +228,9 @@ def exemplo_webhook_fastapi():
 def exemplo_context_manager():
     """Exemplo usando context manager"""
     
+    # ⚠️ IMPORTANTE: Substitua pelas suas credenciais reais ou use variáveis de ambiente
     with NhongaAPI({
-        "api_key": "SUA_CHAVE_API",
+        "api_key": "SUA_CHAVE_API",  # Substitua pela sua chave API real
         "secret_key": "SUA_CHAVE_SECRETA"
     }) as nhonga:
         
