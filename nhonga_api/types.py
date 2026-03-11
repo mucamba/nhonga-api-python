@@ -45,7 +45,7 @@ class CreatePaymentRequest(TypedDict, total=False):
     callbackUrl: Optional[str]
     returnUrl: Optional[str]
     currency: Optional[Currency]
-    enviroment: Optional[Environment]
+    environment: Optional[Environment]
 
 
 class CreatePaymentResponse(TypedDict):
